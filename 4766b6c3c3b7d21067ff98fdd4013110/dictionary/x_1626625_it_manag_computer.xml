@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="2398fe47c3b7d21067ff98fdd401316b" label="Computer" max_length="40" name="x_1626625_it_manag_computer" type="collection">
+        <element attributes="encode_utf8=false" label="Assigned to user" max_length="32" name="assigned_to_user" reference="x_1626625_it_manag_users" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="active" label="Status" max_length="40" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="damaged" value="damaged"/>
+                <element inactive_on_update="false" label="on testing" value="on_testing"/>
+                <element inactive_on_update="false" label="unassigned" value="unassigned"/>
+                <element inactive_on_update="false" label="active" value="active"/>
+                <element inactive_on_update="false" label="on reparation" value="on_reparation"/>
+                <element inactive_on_update="false" label="awaiting repairs" value="awaiting_repairs"/>
+            </choice>
+        </element>
+        <element attributes="encode_utf8=false" label="Responsible it user" max_length="32" name="responsible_it_user" reference="x_1626625_it_manag_users" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Name" mandatory="true" max_length="70" name="name" type="string"/>
+        <index name="index">
+            <element name="assigned_to_user"/>
+        </index>
+        <index name="index2">
+            <element name="responsible_it_user"/>
+        </index>
+    </element>
+</database>
