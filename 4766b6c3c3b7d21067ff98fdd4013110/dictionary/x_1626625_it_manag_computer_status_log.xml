@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="9f058fc3c3f7d21067ff98fdd4013147" label="Computer_Status_Log" max_length="40" name="x_1626625_it_manag_computer_status_log" type="collection">
+        <element label="New status" max_length="70" name="new_status" type="string"/>
+        <element label="Computer ID" max_length="32" name="computer_id" reference="x_1626625_it_manag_computer" type="reference"/>
+        <element label="Old status" max_length="70" name="old_status" type="string"/>
+        <index name="index">
+            <element name="computer_id"/>
+        </index>
+    </element>
+</database>
